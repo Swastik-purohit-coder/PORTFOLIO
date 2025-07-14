@@ -1,0 +1,248 @@
+/* Modern Dark Theme */
+:root {
+    --primary: #0a192f;
+    --secondary: #172a45;
+    --accent: #64ffda;
+    --text: #ccd6f6;
+    --text-secondary: #8892b0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--secondary);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--secondary);
+}
+
+h2 {
+    color: var(--accent);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+/* Skills Grid with Icons */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.skill-item:hover img {
+  filter: grayscale(0%);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--secondary);
+}
+
+
+/* Add these new styles to your existing CSS */
+
+/* Education Table */
+.education-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--primary);
+}
+
+th {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Contact Form */
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form {
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.contact-form h3 {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--text-secondary);
+    color: var(--text);
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+}
