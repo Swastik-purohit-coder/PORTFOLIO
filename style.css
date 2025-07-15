@@ -246,3 +246,6 @@ tr:hover {
 .contact-form button:hover {
     transform: translateY(-3px);
 }
+.hidden {
+    display: none;
+}
